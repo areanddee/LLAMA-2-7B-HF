@@ -34,9 +34,9 @@ sequences = pipeline(
     'I liked "Breaking Bad" and "Band of Brothers". Do you have any recommendations of other shows I might like?\n',
     do_sample=True,
     top_k=10,
-    num_return_sequences=5,
+    num_return_sequences=1,
     eos_token_id=tokenizer.eos_token_id,
-    max_length=200
+    max_length=500
 )
 toc = time.perf_counter()
 print(f"Ran LLAMA pipeline on {device} in {toc - tic:0.4f} seconds")
